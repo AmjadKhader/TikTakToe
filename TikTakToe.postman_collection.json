@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "dfea7e38-1b19-41ca-a1fe-5bba04d961bf",
+		"name": "TikTakToe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24489936"
+	},
+	"item": [
+		{
+			"name": "Make move",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"row\":1, \n    \"col\":1, \n    \"playerName\": \"amjad\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:8092/api/tiktaktoe/games/1/moves"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"player1Name\":\"amjad\",\n    \"player2Name\":\"xyz\",\n    \"player1Symbol\":\"x\",\n    \"player2Symbol\":\"o\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:8092/api/tiktaktoe/games"
+			},
+			"response": []
+		},
+		{
+			"name": "Get game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:8092/api/tiktaktoe/games/1"
+			},
+			"response": []
+		}
+	]
+}
