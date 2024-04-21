@@ -1,0 +1,23 @@
+server:
+  port: 8092
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: "postgres"
+    password: "12345"
+jpa:
+  properties:
+    hibernate:
+      jdbc:
+        lob:
+          non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDi
+      ddl-auto: none
+
+  #Flyway properties
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: "postgres"
+    password: "12345"
